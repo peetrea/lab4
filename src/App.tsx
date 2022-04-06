@@ -1,8 +1,8 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import Layout_content from "./components/Layout_content"
-import {StudenOverview} from "./components/StudenOverview"
+import Layout_content from "./components/Layout"
+import {StudenOverview} from "./components/Overview"
 
 
 const infoStudent = [
@@ -34,31 +34,16 @@ const infoStudent = [
     univerity: "UTM",
     speciality:"RM",
   }
-
 ]
 
-
 function App() {
-
-    const [cards, setCards] = useState([]);
-    const [student, setStudent] = useState([]);
-    
   return (
     <div className="App">
         <Layout_content
-         setCards={setCards}
-        cards = {cards}
         />
-
         <StudenOverview 
-       
         students = {infoStudent}
-        
         />
-
-
-
-
     </div>
   );
 }
